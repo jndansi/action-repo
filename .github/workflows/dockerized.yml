@@ -18,6 +18,6 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
       - name: build the dockerfile
-      - run: docker build . --file ./Dockerfile --tag ${{ secrets.DOCKER_HUB_USERNAME }}/first-gha-img:latest
+        run: docker build . --file ./Dockerfile --tag ${{ secrets.DOCKER_HUB_USERNAME }}/first-gha-img:latest
       - name: Docker push
-      - run: Docker push ${{ secrets.DOCKER_HUB_USERNAME }}/first-gha-img:latest
+        run: Docker push ${{ secrets.DOCKER_HUB_USERNAME }}/first-gha-img:latest
